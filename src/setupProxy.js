@@ -5,6 +5,8 @@ module.exports = function (app) {
         '/api',
         createProxyMiddleware({
             target: 'https://project-pbl6-production.up.railway.app',
+            // target: 'https://api.escuelajs.co',
+
             changeOrigin: true,
         })
     );

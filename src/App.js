@@ -19,12 +19,13 @@ import Product from "./product/Product"
 import { useEffect } from "react"
 import axios from "axios"
 import ProductDetail from "./productdetail/ProductDetail"
+import axiosInstance, { setHeaderToken } from "./apiConfig"
 //import Register from "./components/LoginSignup/Register"
 // import Pageadmin from "./admin/Pageadmin"
 function App() {
 
   const { productItems } = Data
-  // const { shopItems } = Sdata
+  //const { shopItems } = Sdata
 
   // đăng nhập 
   // const [isLoggedIn, setLoggedIn] = useState(false);
@@ -46,10 +47,14 @@ function App() {
   const [apiCate, setapiCate] = useState([])
   useEffect(() => {
     const fetchData = async () => {
+      // const response = await axios.get('api/v1/product');
+      const authToken = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NDgiLCJyb2xlIjpbIlJPTEVfQlVTSU5FU1MiXSwiaWF0IjoxNzAwNjI4ODM0LCJleHAiOjE3MDA2NDY4MzR9.9d3b4kYuEUoNZg3igrnaROFIVQExYfmTuh9TPcKcd30';
       try {
-        const response = await axios.get('/api/v1/product');
-        const shopItems = response.data.content;
+        setHeaderToken(authToken)
+        const response = await axiosInstance.get('/product')
 
+        const shopItems = response.data.content;
+        console.log('Shop item: ', shopItems);
         setshopItems(shopItems)
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -57,7 +62,7 @@ function App() {
     };
     const APIcategory = async () => {
       try {
-        const response = await axios.get('/api/v1/category');
+        const response = await axiosInstance.get('category');
         const apiCate = response.data.content;
 
         setapiCate(apiCate)

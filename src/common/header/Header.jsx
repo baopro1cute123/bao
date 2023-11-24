@@ -22,7 +22,7 @@ const Header = ({ CartItem }) => {
   return (
     <>
       <Head />
-      <Navbar />
+      {/* <Navbar /> */}
       <Search CartItem={CartItem} />
     </>
   );
