@@ -34,6 +34,9 @@ const Product = ({ addToCart, shopItems, apiCate }) => {
                         <div className='product-content  grid1'>
                             <ProductCart addToCart={addToCart} shopItems={shopItems} />
                         </div>
+                        <div>
+                            
+                        </div>
                     </div>
                 </div>
             </section>

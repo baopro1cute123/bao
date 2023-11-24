@@ -1,0 +1,33 @@
+/* category.css */
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.boxx {
+    text-align: center;
+    margin: 30px;
+}
+
+.boxx img {
+    width: 100px;
+    /* Adjust the width as needed */
+    height: 100px;
+    /* Adjust the height as needed */
+    object-fit: cover;
+    /* This property ensures the image retains its aspect ratio */
+    border-radius: 50%;
+    /* Makes the image circular. You can remove this if not needed. */
+}
+
+.boxx span {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+}
+
+/* Add more styles as needed for responsiveness and customization */

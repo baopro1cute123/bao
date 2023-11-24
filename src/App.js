@@ -20,8 +20,9 @@ import { useEffect } from "react"
 import axios from "axios"
 import ProductDetail from "./productdetail/ProductDetail"
 import axiosInstance, { setHeaderToken } from "./apiConfig"
+import HeaderLogin from "./common/headerLogin/HeaderLogin"
 //import Register from "./components/LoginSignup/Register"
-// import Pageadmin from "./admin/Pageadmin"
+import Pageadmin from "./admin/Pageadmin"
 function App() {
 
   const { productItems } = Data
@@ -105,9 +106,10 @@ function App() {
   return (
     <>
       <Router>
-        {<Header CartItem={CartItem} />}
-        {/* {<Header CartItem={CartItem} isLoggedIn={isLoggedIn} username={username} onLogout={handleLogout} />} */}
+        {/* {<HeaderLogin />}
 
+        {<Header CartItem={CartItem} />} */}
+        {/* {<Header CartItem={CartItem} isLoggedIn={isLoggedIn} username={username} onLogout={handleLogout} />} */}
         <Switch>
           <Route path='/' exact>
             <Pages productItems={productItems} addToCart={addToCart} shopItems={shopItems} />
@@ -140,12 +142,12 @@ function App() {
           <Route path='/product' exact>
             <Product addToCart={addToCart} shopItems={shopItems} apiCate={apiCate} />
           </Route>
-          {/* <Route path='/admin' exact>
+          <Route path='/admin' exact>
             <Pageadmin />
-          </Route> */}
+          </Route>
         </Switch>
         {/* {<AppRouter />} */}
-        {<Footer />}
+        {/* {<Footer />} */}
       </Router>
     </>
   )

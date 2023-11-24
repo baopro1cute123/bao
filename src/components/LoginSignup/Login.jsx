@@ -3,7 +3,7 @@ import axios from 'axios';
 //import { loginApi } from '../services/UserService';
 import { toast } from 'react-toastify';
 import { useContext } from 'react';
-import "./style.css"
+import "./loginsignup.css"
 import { Link } from 'react-router-dom';
 //import { UserContext } from '../context/UserContext';
 const Login = (onLoginSuccess) => {

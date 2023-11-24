@@ -1,0 +1,42 @@
+.logologin {
+    width: 230px;
+    height: 70px;
+}
+
+.dn {
+    font-size: 160px;
+}
+
+/*------head-----------*/
+.headlogin {
+    background-color: #606eca;
+    padding: 20px 0;
+    color: black;
+}
+
+.headlogin i {
+    margin-right: 10px;
+}
+
+.headlogin label {
+    margin-right: 30px;
+    font-size: 14px;
+    color: black;
+
+
+}
+
+.headlogin .dn {
+    margin-right: 30px;
+    font-size: 40px;
+    color: black;
+
+}
+
+
+.headlogin button {
+    margin-right: 30px;
+    font-size: 13px;
+}
+
+/*------head-----------*/
