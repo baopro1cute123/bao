@@ -11,7 +11,6 @@ import Contactt from "./components/contact/Contactt"
 import Login from "./components/LoginSignup/Login"
 import Register from "./components/LoginSignup/Register"
 import AppRouter from "./router"
-import MyAccount from "./components/myacc/MyAccount"
 import Vendor from "./components/vendor/Vendor"
 import Track from "./components/track/Track"
 import Checkout from "./components/checkout/Checkout"
@@ -23,6 +22,7 @@ import axiosInstance, { setHeaderToken } from "./apiConfig"
 import HeaderLogin from "./common/headerLogin/HeaderLogin"
 //import Register from "./components/LoginSignup/Register"
 import Pageadmin from "./admin/Pageadmin"
+import Profile from "./profile/Profile"
 function App() {
 
   const { productItems } = Data
@@ -106,9 +106,9 @@ function App() {
   return (
     <>
       <Router>
-        {/* {<HeaderLogin />}
+        {/* {<HeaderLogin />}} */}
 
-        {<Header CartItem={CartItem} />} */}
+        <Header CartItem={CartItem} />
         {/* {<Header CartItem={CartItem} isLoggedIn={isLoggedIn} username={username} onLogout={handleLogout} />} */}
         <Switch>
           <Route path='/' exact>
@@ -127,9 +127,7 @@ function App() {
           <Route path='/register' exact>
             <Register />
           </Route>
-          <Route path='/myacc' exact>
-            <MyAccount />
-          </Route>
+
           <Route path='/product/:id' exact>
             <ProductDetail CartItem={CartItem} addToCart={addToCart} shopItems={shopItems} />
           </Route>
@@ -139,16 +137,19 @@ function App() {
           <Route path='/checkout' exact>
             <Checkout />
           </Route>
+          <Route path='/profile' exact>
+            <Profile />
+          </Route>
           <Route path='/product' exact>
             <Product addToCart={addToCart} shopItems={shopItems} apiCate={apiCate} />
           </Route>
           <Route path='/admin' exact>
             <Pageadmin />
           </Route>
-        </Switch>
+        </Switch >
         {/* {<AppRouter />} */}
         {/* {<Footer />} */}
-      </Router>
+      </Router >
     </>
   )
 }

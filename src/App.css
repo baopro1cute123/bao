@@ -229,6 +229,33 @@ button {
   opacity: 1;
 }
 
+/* Pagination.css */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination-item {
+  color: #333;
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.pagination-item.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.pagination-item:hover {
+  background-color: #ddd;
+}
+
 /*---------product-----------*/
 /*----- control btn -------*/
 .control-btn .next,

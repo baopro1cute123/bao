@@ -4,7 +4,18 @@ import ProductCart from "./ProductCart";
 import Hproduct from "./Hproduct";
 import Tips from "./tips/Tips";
 import Sortproduct from "./Sortproduct";
+import ReactPaginate from 'react-paginate';
+import Pagination from "./Pagination";
+import { useState } from "react";
 const Product = ({ addToCart, shopItems, apiCate }) => {
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = 10; // Số trang tổng cộng
+
+    const handlePageChange = (pageNumber) => {
+        setCurrentPage(pageNumber);
+        // Thực hiện các xử lý khác khi trang thay đổi, ví dụ: gọi API để lấy dữ liệu mới
+        console.log(`Đã chuyển đến trang ${pageNumber}`);
+    };
     return (
         <>
             <section className='shop background'>
@@ -34,8 +45,8 @@ const Product = ({ addToCart, shopItems, apiCate }) => {
                         <div className='product-content  grid1'>
                             <ProductCart addToCart={addToCart} shopItems={shopItems} />
                         </div>
-                        <div>
-                            
+                        <div >
+                            <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
                         </div>
                     </div>
                 </div>
