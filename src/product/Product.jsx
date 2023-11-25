@@ -4,7 +4,6 @@ import ProductCart from "./ProductCart";
 import Hproduct from "./Hproduct";
 import Tips from "./tips/Tips";
 import Sortproduct from "./Sortproduct";
-import ReactPaginate from 'react-paginate';
 import Pagination from "./Pagination";
 import { useState } from "react";
 const Product = ({ addToCart, shopItems, apiCate }) => {

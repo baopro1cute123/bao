@@ -1,5 +1,3 @@
-// SortProduct.js
-
 import React from "react";
 
 const Sortproduct = ({ }) => {

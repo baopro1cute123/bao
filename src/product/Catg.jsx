@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./catg.css";
+import "./Catg.css";
 
 const Catg = ({ shopItems, apiCate }) => {
 
