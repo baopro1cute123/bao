@@ -26,7 +26,7 @@ const Head = () => {
               <label><Link to="/account">👤 Tài khoản</Link></label>
               <ul>
                 <li><Link to="/profile">👤 Hồ sơ của tôi</Link></li>
-                <li><Link to="/track">🛒 Đơn hàng</Link></li>
+                <li><Link to="/order">🛒 Đơn hàng</Link></li>
                 <li><Link to="/account/settings">🚪 Đăng xuất</Link></li>
               </ul>
             </div>

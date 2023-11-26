@@ -6,49 +6,30 @@ import Pages from "./pages/Pages"
 import Data from "./components/Data"
 import Cart from "./common/Cart/Cart"
 import Footer from "./common/footer/Footer"
-import Sdata from "./components/shops/Sdata"
 import Contactt from "./components/contact/Contactt"
 import Login from "./components/LoginSignup/Login"
 import Register from "./components/LoginSignup/Register"
-import AppRouter from "./router"
-import Vendor from "./components/vendor/Vendor"
-import Track from "./components/track/Track"
 import Checkout from "./components/checkout/Checkout"
 import Product from "./product/Product"
 import { useEffect } from "react"
-import axios from "axios"
 import ProductDetail from "./productdetail/ProductDetail"
 import axiosInstance, { setHeaderToken } from "./apiConfig"
 import HeaderLogin from "./common/headerLogin/HeaderLogin"
 //import Register from "./components/LoginSignup/Register"
 import Pageadmin from "./admin/Pageadmin"
 import Profile from "./profile/Profile"
+import Order from "./order/Order"
+import AllProduct from "./allProduct/AllProduct"
 function App() {
 
   const { productItems } = Data
-  //const { shopItems } = Sdata
 
-  // đăng nhập 
-  // const [isLoggedIn, setLoggedIn] = useState(false);
-  // const [username, setUsername] = useState('');
-
-  // const handleLoginSuccess = (userData) => {
-  //   setLoggedIn(true);
-  //   setUsername(userData.username);
-  // };
-
-  // const handleLogout = () => {
-  //   setLoggedIn(false);
-  //   setUsername('');
-  //   // Thực hiện các hành động khác sau khi đăng xuất
-  // };
 
   const [CartItem, setCartItem] = useState([])
   const [shopItems, setshopItems] = useState([])
   const [apiCate, setapiCate] = useState([])
   useEffect(() => {
     const fetchData = async () => {
-      // const response = await axios.get('api/v1/product');
       const authToken = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NDgiLCJyb2xlIjpbIlJPTEVfQlVTSU5FU1MiXSwiaWF0IjoxNzAwNjI4ODM0LCJleHAiOjE3MDA2NDY4MzR9.9d3b4kYuEUoNZg3igrnaROFIVQExYfmTuh9TPcKcd30';
       try {
         setHeaderToken(authToken)
@@ -131,8 +112,13 @@ function App() {
           <Route path='/product/:id' exact>
             <ProductDetail CartItem={CartItem} addToCart={addToCart} shopItems={shopItems} />
           </Route>
-          <Route path='/track' exact>
-            <Track />
+          <Route path='/order' exact>
+            <Order />
+
+          </Route>
+          <Route path='/allproduct' exact>
+            <AllProduct />
+
           </Route>
           <Route path='/checkout' exact>
             <Checkout />
@@ -148,7 +134,7 @@ function App() {
           </Route>
         </Switch >
         {/* {<AppRouter />} */}
-        {/* {<Footer />} */}
+        {<Footer />}
       </Router >
     </>
   )

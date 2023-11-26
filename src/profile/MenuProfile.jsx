@@ -16,10 +16,8 @@ const MenuProfile = () => {
                         <li><Link to="/myacc"> 💳Ngân Hàng</Link></li>
                         <li><Link to="/track">📍Địa chỉ</Link></li>
                         <li><Link to="/account/settings">🔒Đổi mật khẩu</Link></li>
-                        <li><Link to="/account/settings">🔔Thông báo</Link></li>
                     </ul>
                     <label className='lableprofile'><Link to="/account">🔔Đơn hàng</Link></label>
-                    <label className='lableprofile'><Link to="/account">🔔Liên Hệ</Link></label>
 
                     <label className='lableprofile'><Link to="/account">🔔Cài đặt</Link></label>
 
