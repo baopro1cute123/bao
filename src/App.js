@@ -20,6 +20,7 @@ import Pageadmin from "./admin/Pageadmin"
 import Profile from "./profile/Profile"
 import Order from "./order/Order"
 import AllProduct from "./allProduct/AllProduct"
+import Business from "./business/Business"
 function App() {
 
   const { productItems } = Data
@@ -131,6 +132,9 @@ function App() {
           </Route>
           <Route path='/admin' exact>
             <Pageadmin />
+          </Route>
+          <Route path='/business' exact>
+            <Business />
           </Route>
         </Switch >
         {/* {<AppRouter />} */}

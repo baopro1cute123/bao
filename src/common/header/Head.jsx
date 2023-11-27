@@ -8,8 +8,8 @@ const Head = () => {
       <section className='head'>
         <div className='container d_flex'>
           <div className='left row'>
-            📞
-            <label> +03 99 23 52 54</label>
+
+            <label><Link to='/business'>📧 Kênh người bán</Link></label>
             ✉️
             <label> dt5@gmail.com</label>
           </div>

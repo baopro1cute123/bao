@@ -17,7 +17,6 @@ const MyOrder = ({ orders }) => {
                                     <span>Số lượng: {item.quantity}</span>
                                     <span>Mô tả: {item.detail}</span>
                                     <span>Size: {item.size}</span>
-
                                     <span>Giá tiền: ${item.price * item.quantity}</span>
                                 </div>
                             </li>
