@@ -21,6 +21,8 @@ import Profile from "./profile/Profile"
 import Order from "./order/Order"
 import AllProduct from "./allProduct/AllProduct"
 import Business from "./business/Business"
+import NewProductPage from "./business/NewProductPage"
+import Admin from "./pageAdmin/Admin"
 function App() {
 
   const { productItems } = Data
@@ -90,7 +92,7 @@ function App() {
       <Router>
         {/* {<HeaderLogin />}} */}
 
-        <Header CartItem={CartItem} />
+        {/* <Header CartItem={CartItem} /> */}
         {/* {<Header CartItem={CartItem} isLoggedIn={isLoggedIn} username={username} onLogout={handleLogout} />} */}
         <Switch>
           <Route path='/' exact>
@@ -133,12 +135,18 @@ function App() {
           <Route path='/admin' exact>
             <Pageadmin />
           </Route>
+          <Route path='/pageadmin' exact>
+            <Admin />
+          </Route>
           <Route path='/business' exact>
             <Business />
           </Route>
+          <Route path='/new-product' exact>
+            <NewProductPage />
+          </Route>
         </Switch >
         {/* {<AppRouter />} */}
-        {<Footer />}
+        {/* {<Footer />} */}
       </Router >
     </>
   )

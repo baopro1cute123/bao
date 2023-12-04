@@ -4,6 +4,7 @@ import Track from './Track'
 import BProduct from './BProduct'
 import NewProductPage from './NewProductPage'
 import Shipping from './Shipping'
+import Revenue from './Revenue'
 
 const Business = () => {
     return (
@@ -27,7 +28,7 @@ const Business = () => {
                         <Shipping />
                         <Track />
                         <BProduct />
-                        <NewProductPage />
+                        <Revenue />
                     </div>
                 </div>
             </section>

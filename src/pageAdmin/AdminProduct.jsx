@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-const BProduct = () => {
+const AdminProduct = () => {
   const history = useHistory();
   const [trackingInfo, setTrackingInfo] = useState([
     {
@@ -10,6 +10,7 @@ const BProduct = () => {
       orderNumber: '123456',
       status: 'Đã giao hàng',
       location: 'Đang vận chuyển',
+      business: "AB",
       estimatedDelivery: '10 Tháng 12, 2023',
     },
     {
@@ -19,6 +20,7 @@ const BProduct = () => {
       orderNumber: '789012',
       status: 'Chưa giao hàng',
       location: 'Đang xác nhận đơn hàng',
+      business: "AB",
       estimatedDelivery: '15 Tháng 12, 2023',
     },
   ]);
@@ -26,13 +28,12 @@ const BProduct = () => {
 
     history.push('/new-product');
   };
-  const handleEitProduct = () => {
+  const handleEitUser = () => {
 
   }
-  const handleDeleteProduct = () => {
+  const handleDeleteUser = () => {
 
   }
-
   return (
     <div className="track-container">
       <h2>Quản lý sản phẩm</h2>
@@ -42,10 +43,8 @@ const BProduct = () => {
         <div>Phân loại</div>
         <div>Hình ảnh</div>
         <div>Giá tiền</div>
-        <div>Mô tả sản phẩm</div>
+        <div>Doanh nghiệp</div>
         <div>Action</div>
-        <div>Action</div>
-
 
       </div>
 
@@ -57,15 +56,16 @@ const BProduct = () => {
             <img src={product.img} alt={`Product ${index + 1}`} />
           </div>
           <div>{product.total}</div>
-          <div>{product.status}</div>
-          <div>{product.estimatedDelivery}</div>
-          <div> <button className='edit' onClick={() => handleEitProduct()}>Edit</button>
-            <button className="delete" onClick={() => handleDeleteProduct()}>Delete</button>
+          <div>{product.business}</div>
+          <div>
+            <button className='edit' onClick={() => handleEitUser()}>Edit</button>
+            <button className='delete' onClick={() => handleDeleteUser()}>Delete</button>
           </div>
         </div>
-      ))}
-    </div>
+      ))
+      }
+    </div >
   );
 };
 
-export default BProduct;
+export default AdminProduct;

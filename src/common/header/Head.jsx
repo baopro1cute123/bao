@@ -10,8 +10,8 @@ const Head = () => {
           <div className='left row'>
 
             <label><Link to='/business'>📧 Kênh người bán</Link></label>
-            ✉️
-            <label> dt5@gmail.com</label>
+
+            <label><Link to='/admin'>📧 Kênh Admin</Link></label>
           </div>
           <div className='right row RText'>
             📢
