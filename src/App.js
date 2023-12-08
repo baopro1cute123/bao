@@ -144,10 +144,10 @@ function App() {
           <Route path='/new-product' exact>
             <NewProductPage />
           </Route>
-        </Switch >
+          </Switch>
         {/* {<AppRouter />} */}
         {<Footer />}
-      </Router >
+        </Router>
     </>
   )
 }
