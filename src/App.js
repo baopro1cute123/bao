@@ -16,7 +16,7 @@ import ProductDetail from "./productdetail/ProductDetail"
 import axiosInstance, { setHeaderToken } from "./apiConfig"
 import HeaderLogin from "./common/headerLogin/HeaderLogin"
 //import Register from "./components/LoginSignup/Register"
-import Pageadmin from "./admin/Pageadmin"
+// import Pageadmin from "./admin/Pageadmin"
 import Profile from "./profile/Profile"
 import Order from "./order/Order"
 import AllProduct from "./allProduct/AllProduct"
@@ -92,7 +92,7 @@ function App() {
       <Router>
         {/* {<HeaderLogin />}} */}
 
-        {/* <Header CartItem={CartItem} /> */}
+        <Header CartItem={CartItem} />
         {/* {<Header CartItem={CartItem} isLoggedIn={isLoggedIn} username={username} onLogout={handleLogout} />} */}
         <Switch>
           <Route path='/' exact>
@@ -132,9 +132,9 @@ function App() {
           <Route path='/product' exact>
             <Product addToCart={addToCart} shopItems={shopItems} apiCate={apiCate} />
           </Route>
-          <Route path='/admin' exact>
-            <Pageadmin />
-          </Route>
+          {/* <Route path='/admin' exact>
+            <Pageadmin /> */}
+          {/* </Route> */}
           <Route path='/pageadmin' exact>
             <Admin />
           </Route>
@@ -146,7 +146,7 @@ function App() {
           </Route>
         </Switch >
         {/* {<AppRouter />} */}
-        {/* {<Footer />} */}
+        {<Footer />}
       </Router >
     </>
   )
