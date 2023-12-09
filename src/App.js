@@ -23,27 +23,22 @@ import AllProduct from "./allProduct/AllProduct"
 import Business from "./business/Business"
 import NewProductPage from "./business/NewProductPage"
 import Admin from "./pageAdmin/Admin"
+import Loading from "./loading/Loading"
 function App() {
 
   const { productItems } = Data
 
-
+  
   const [CartItem, setCartItem] = useState([])
   const [shopItems, setshopItems] = useState([])
   const [apiCate, setapiCate] = useState([])
   useEffect(() => {
     const fetchData = async () => {
-      const authToken = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0NDgiLCJyb2xlIjpbIlJPTEVfQlVTSU5FU1MiXSwiaWF0IjoxNzAwNjI4ODM0LCJleHAiOjE3MDA2NDY4MzR9.9d3b4kYuEUoNZg3igrnaROFIVQExYfmTuh9TPcKcd30';
-      try {
-        setHeaderToken(authToken)
-        const response = await axiosInstance.get('/product')
-
-        const shopItems = response.data.content;
+      const response = await fetch('/api/v1/products');
+        const shopItems = await response.json();
         console.log('Shop item: ', shopItems);
         setshopItems(shopItems)
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+      
     };
     const APIcategory = async () => {
       try {
@@ -122,6 +117,9 @@ function App() {
           <Route path='/allproduct' exact>
             <AllProduct />
 
+          </Route>
+          <Route path='/loading' exact>
+            <Loading />
           </Route>
           <Route path='/checkout' exact>
             <Checkout />

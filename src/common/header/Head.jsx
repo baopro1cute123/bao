@@ -11,7 +11,7 @@ const Head = () => {
 
             <label><Link to='/business'>📧 Kênh người bán</Link></label>
 
-            <label><Link to='/admin'>📧 Kênh Admin</Link></label>
+            <label><Link to='/pageadmin'>📧 Kênh Admin</Link></label>
           </div>
           <div className='right row RText'>
             📢

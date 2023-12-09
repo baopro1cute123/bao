@@ -1,18 +1,57 @@
-// ProductDetail.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetail.css';
+const shopItems = [
+    {
+        id: 1,
+        name: "Product 1",
+        discount: 10,
+        imageSet: [
+            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+        ],
+        price: 100000,
+        detail: "Product 1 details",
+        attribute: "Attribute 1",
+        brand: "Brand 1",
+        quantity: 10,
+        sizes: [
+            { name: "Small" },
+            { name: "Medium" },
+            { name: "Large" }
+          ]
+    },
+    {
+        id: 2,
+        name: "Product 2", // Make sure each product has a unique name
+        discount: 10,
+        imageSet: [
+            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+        ],
+        price: 100000,
+        detail: "Product 2 details", // Change details for each product
+        attribute: "Attribute 2", // Change attributes for each product
+        brand: "Brand 2", // Change brands for each product
+        quantity: 10,
+        sizes: [
+            { name: "Small" },
+            { name: "Medium" },
+            { name: "Large" }
+          ]
+    },
+];
 
-const ProductDetail = ({ shopItems, addToCart }) => {
 
-
+const ProductDetail = ({ addToCart }) => {
+    
     const [comments, setComments] = useState([]);
     const [reviews, setReviews] = useState([]);
 
-
     const { id } = useParams();
     const [product, setProduct] = useState({});
-
 
     const [newComment, setNewComment] = useState("");
 
@@ -32,6 +71,8 @@ const ProductDetail = ({ shopItems, addToCart }) => {
             setNewComment("");
         }
     };
+
+    
     useEffect(() => {
         const selectedProduct = shopItems.find(item => item.id === parseInt(id, 10));
         setProduct(selectedProduct || {});
@@ -40,10 +81,22 @@ const ProductDetail = ({ shopItems, addToCart }) => {
     return (
         <>
             <div className="product-detail-container">
-                <div className="product-image-container">
-                    {product.imageSet && (
-                        <img src={product.imageSet[0].url} alt={`Product ${id}`} className="product-image" />
-                    )}
+            <div className="product-image-container">
+                <div className="main-image">
+                {product.imageSet && product.imageSet.length > 0 && (
+                <img
+                    src={product.imageSet[0].url} 
+                    alt={`Product ${id} - Main Image`} 
+                    className="product-image"/>)}
+                </div>
+                    <div className="thumbnail-images">
+                         {product.imageSet && product.imageSet.map((image, index) => (
+                            <img
+                                key={index} 
+                                 src={image.url} 
+                                    alt={`Product ${id} - Thumbnail ${index + 1}`} 
+                                className="thumbnail-image" /> ))}
+                        </div>
                 </div>
                 <div className="product-info-container">
                     <h2 className="product-name">{product.name}</h2>
@@ -58,9 +111,17 @@ const ProductDetail = ({ shopItems, addToCart }) => {
                     <p className="product-quantity">
                         <strong>Quantity:</strong> {product.quantity}
                     </p>
-                    <button onClick={() => addToCart(shopItems)} className="add-to-cart-button">Thêm vào giỏ hàng</button>
+                    <p className="product-size">
+                    
+                        <strong>Size:</strong> 
+                        {product.sizes && product.sizes.map((size, index) => (
+                         <button key={index}>
+                             {size.name}
+                            </button>
+                        ))}
+                    </p>
+                    <button onClick={() => addToCart(product)} className="add-to-cart-button">Thêm vào giỏ hàng</button>
                 </div>
-
             </div>
             <div className="product-comments-container">
                 <h3>Bình Luận và Đánh Giá</h3>

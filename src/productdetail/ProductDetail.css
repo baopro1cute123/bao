@@ -12,13 +12,55 @@
     flex: 1;
 }
 
+
 .product-image-container {
-    overflow: hidden;
-    border-radius: 8px;
+  display: flex;
+  align-items: center;    
+
 }
 
+.main-image {
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.product-image:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail-images {
+  display: flex;
+  flex-direction: column; /* Arrange thumbnail images vertically */
+  margin-top: 10px;
+}
+
+.thumbnail-image {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 1px; /* Adjust margin for vertical spacing */
+  cursor: pointer;
+  border: 2px solid #fff; /* Add a border with white color */
+  border-radius: 8px; /* Add a border radius for a rounded appearance */
+  transition: border-color 0.3s; /* Add a transition for a smooth effect */
+}
+
+.thumbnail-image:hover {
+  border-color: #ee4d2d; /* Change border color on hover */
+}
+
+/* Add additional styling based on your design needs */
+
+
 .product-info-container {
-    margin-left: 40px;
+    margin-left: 200px;
 }
 
 .product-name {
