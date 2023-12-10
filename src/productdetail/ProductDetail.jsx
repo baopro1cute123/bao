@@ -69,7 +69,10 @@ const ProductDetail = ({ addToCart }) => {
     const [startIndex, setStartIndex] = useState(0);
 
     const showNextImages = () => {
-        setStartIndex((prevIndex) => Math.min(prevIndex + 1, product.imageSet.length - 1));
+        const totalImages = product.imageSet.length;
+        const imagesToShow = 3;
+    
+        setStartIndex((prevIndex) => (prevIndex + imagesToShow < totalImages) ? prevIndex + 1 : 0);
     };
 
     const showPrevImages = () => {
