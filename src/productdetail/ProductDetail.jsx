@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetail.css';
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa6";
+
+
 const shopItems = [
     {
         id: 1,
         name: "Product 1",
         discount: 10,
         imageSet: [
+            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/10/30/969136/Cristiano-Ronaldo4.jpg" },
             { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+            { url: "https://mega.com.vn/media/news/0106_Hinh-nen-ronadol-4k6.jpg" },
+            { url: "https://cdnmedia.baotintuc.vn/Upload/DmtgOUlHWBO5POIHzIwr1A/files/2022/12/12/Ronaldo-12122022a.jpg" },
             { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
-            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+
+
         ],
         price: 100000,
         detail: "Product 1 details",
@@ -30,6 +38,10 @@ const shopItems = [
             { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
             { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
             { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+            { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+
+
         ],
         price: 100000,
         detail: "Product 2 details", // Change details for each product
@@ -54,6 +66,16 @@ const ProductDetail = ({ addToCart }) => {
     const [product, setProduct] = useState({});
 
     const [newComment, setNewComment] = useState("");
+    const [startIndex, setStartIndex] = useState(0);
+
+    const showNextImages = () => {
+        setStartIndex((prevIndex) => Math.min(prevIndex + 1, product.imageSet.length - 1));
+    };
+
+    const showPrevImages = () => {
+        setStartIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    };
+
 
     const submitComment = () => {
         if (newComment.trim() !== "") {
@@ -82,21 +104,31 @@ const ProductDetail = ({ addToCart }) => {
         <>
             <div className="product-detail-container">
             <div className="product-image-container">
-                <div className="main-image">
-                {product.imageSet && product.imageSet.length > 0 && (
-                <img
-                    src={product.imageSet[0].url} 
-                    alt={`Product ${id} - Main Image`} 
-                    className="product-image"/>)}
-                </div>
-                    <div className="thumbnail-images">
-                         {product.imageSet && product.imageSet.map((image, index) => (
+            <div className="main-image">
+                        {product.imageSet && product.imageSet.length > 0 && (
                             <img
-                                key={index} 
-                                 src={image.url} 
-                                    alt={`Product ${id} - Thumbnail ${index + 1}`} 
-                                className="thumbnail-image" /> ))}
-                        </div>
+                                src={product.imageSet[startIndex].url}
+                                alt={`Product ${id} - Main Image`}
+                                className="product-image"
+                            />
+                        )}
+                    </div>
+                    <div className='product-img'>
+                    <button className="iconimg" onClick={showPrevImages} disabled={startIndex === 0}><FaArrowLeft /></button>
+                    <div className="thumbnail-images">
+                        {product.imageSet &&
+                            product.imageSet.slice(startIndex, startIndex + 3).map((image, index) => (
+                                <img
+                                    key={startIndex + index}
+                                    src={image.url}
+                                    alt={`Product ${id} - Thumbnail ${startIndex + index + 1}`}
+                                    className="thumbnail-image"
+                                />
+                            ))}
+                    </div>
+                    
+                    <button className="iconimg" onClick={showNextImages} disabled={startIndex >= (product.imageSet?.length || 0) - 1}><FaArrowRight /></button>
+                    </div>
                 </div>
                 <div className="product-info-container">
                     <h2 className="product-name">{product.name}</h2>
