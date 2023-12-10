@@ -3,7 +3,9 @@ import { useParams } from 'react-router-dom';
 import './ProductDetail.css';
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa6";
-
+import Shopdetail from './Shopdetail';
+import Detail from './Detail';
+import Comment from './Comment';
 
 const shopItems = [
     {
@@ -59,13 +61,11 @@ const shopItems = [
 
 const ProductDetail = ({ addToCart }) => {
     
-    const [comments, setComments] = useState([]);
-    const [reviews, setReviews] = useState([]);
+    
 
     const { id } = useParams();
     const [product, setProduct] = useState({});
 
-    const [newComment, setNewComment] = useState("");
     const [startIndex, setStartIndex] = useState(0);
 
     const showNextImages = () => {
@@ -79,23 +79,6 @@ const ProductDetail = ({ addToCart }) => {
         setStartIndex((prevIndex) => Math.max(prevIndex - 1, 0));
     };
 
-
-    const submitComment = () => {
-        if (newComment.trim() !== "") {
-            const currentDate = new Date();
-            const formattedDate = currentDate.toLocaleString();
-
-            const newCommentObject = {
-                user: "Tên Người Dùng", // Thay bằng thông tin tên người dùng thực tế
-                rating: 5, // Thay bằng số sao thực tế
-                comment: newComment,
-                time: formattedDate,
-            };
-
-            setComments([...comments, newCommentObject]);
-            setNewComment("");
-        }
-    };
 
     
     useEffect(() => {
@@ -158,28 +141,10 @@ const ProductDetail = ({ addToCart }) => {
                     <button onClick={() => addToCart(product)} className="add-to-cart-button">Thêm vào giỏ hàng</button>
                 </div>
             </div>
-            <div className="product-comments-container">
-                <h3>Bình Luận và Đánh Giá</h3>
-                <ul>
-                    {comments.map((comment, index) => (
-                        <li key={index}>
-                            <p><strong>{comment.user}</strong></p>
-                            <p>{comment.rating} sao</p>
-                            <p>{comment.comment}</p>
-                            <p>{comment.time}</p>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div className="user-feedback-container">
-                <h3>Thêm Bình Luận và Đánh Giá</h3>
-                <textarea
-                    placeholder="Nhập bình luận của bạn..."
-                    value={newComment}
-                    onChange={(e) => setNewComment(e.target.value)}
-                />
-                <button onClick={submitComment}>Gửi Bình Luận</button>
-            </div>
+
+            <Shopdetail/>
+            <Detail product={product}/>
+            <Comment />
         </>
     );
 };

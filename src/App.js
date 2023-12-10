@@ -32,28 +32,28 @@ function App() {
   const [CartItem, setCartItem] = useState([])
   const [shopItems, setshopItems] = useState([])
   const [apiCate, setapiCate] = useState([])
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch('/api/v1/products');
-        const shopItems = await response.json();
-        console.log('Shop item: ', shopItems);
-        setshopItems(shopItems)
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const response = await fetch('/api/v1/products');
+  //       const shopItems = await response.json();
+  //       console.log('Shop item: ', shopItems);
+  //       setshopItems(shopItems)
       
-    };
-    const APIcategory = async () => {
-      try {
-        const response = await axiosInstance.get('category');
-        const apiCate = response.data.content;
+  //   };
+  //   const APIcategory = async () => {
+  //     try {
+  //       const response = await axiosInstance.get('category');
+  //       const apiCate = response.data.content;
 
-        setapiCate(apiCate)
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+  //       setapiCate(apiCate)
+  //     } catch (error) {
+  //       console.error('Error fetching data:', error);
+  //     }
+  //   };
 
-    fetchData();
-    APIcategory();
-  }, []);
+  //   fetchData();
+  //   APIcategory();
+  // }, []);
 
   const addToCart = (product) => {
 

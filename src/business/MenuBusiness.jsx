@@ -8,9 +8,9 @@ const MenuBusiness = () => {
                 <div className="menu-business">
                     <label><Link to="/account"> Vận chuyển</Link></label>
                     <ul>
-                        <li><Link to="/myacc"> Quản lý vận chuyển</Link></li>
-                        <li><Link to="/myacc"> Giao hàng loạt</Link></li>
-                        <li><Link to="/track">Cài đặt vận chuyển</Link></li>
+                        <li><Link to="/myacc"> Quản lý </Link></li>
+                        <li><Link to="/myacc"> Trạng thái </Link></li>
+                        <li><Link to="/track">Cài đặt </Link></li>
                     </ul>
                 </div>
                 <div className="menu-business">
@@ -19,7 +19,7 @@ const MenuBusiness = () => {
                     <ul>
                         <li><Link to="/myacc"> Tất cả </Link></li>
                         <li><Link to="/myacc"> Đơn hủy</Link></li>
-                        <li><Link to="/track">Trả Hàng/ Hoàn tiền</Link></li>
+                        <li><Link to="/track">Trả Hàng</Link></li>
                     </ul>
                 </div>
                 <div className="menu-business">
