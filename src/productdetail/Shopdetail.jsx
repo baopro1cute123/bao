@@ -7,11 +7,13 @@ const Shopdetail = () => {
             <div className="store-header">
                 <div className="store-header-info">
                     <div className='shop-name'>
-                        <h1>DT5Sport</h1>&nbsp;&nbsp;&nbsp;
-                        <img src={logoImage} alt="DT5 SPORT" />&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button className='b'>Theo dõi</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button className='b'>Nhắn tin</button>
+                        <img src={logoImage} alt="DT5 SPORT" />
+                        <div className='shop-flow'>
+                        &nbsp;<h1 className='h1-shopname'>DT5Sport</h1>
 
+                        <button className='b'>Theo dõi</button>
+                        <button className='b'>Nhắn tin</button>
+                        </div>
                     </div>
                     <div className='shop-review'>
                         <p>

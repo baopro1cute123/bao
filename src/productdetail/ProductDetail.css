@@ -42,7 +42,7 @@ body{
 }
 
 .main-image {
-  max-width: 200px;
+  max-width: 300px;
   max-height: 100%;
   border-radius: 8px;
   overflow: hidden;
@@ -50,7 +50,7 @@ body{
 }
 
 .product-image {
-  width: 200px;
+  width: 300px;
   height: 100%px;
   transition: transform 0.3s ease-in-out;}
 
@@ -203,6 +203,26 @@ body{
    background-color: #606eca;
     
   }
+  /* CSS for the star icon */
+.star-icon {
+  color: #ddd; /* Màu sắc cho sao không được chọn */
+  transition: color 0.3s ease;
+  
+
+}
+.star-iicon {
+  color: #f8d204; /* Màu sắc cho sao không được chọn */
+
+  transition: color 0.3s ease;
+  
+
+}
+
+/* CSS for the selected star icon */
+.star-icon.selected {
+  color: #f8d204; /* Màu sắc cho sao được chọn */
+}
+
   
 .user-feedback-container textarea {
     width: 100%;
@@ -229,18 +249,19 @@ body{
 .shopdetail-container {
     max-width: 1200px;
     /* Adjust the width as needed */
+    max-height: 200px;
     margin: 0 auto;
-    padding: 60px;
+    padding: 30px;
     border: 1px solid #ddd;
     /* Add border or any other styling you prefer */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Optional: Add a subtle box shadow */
-    margin-top: 30px;
+    margin-top: 20px;
     
     button{
-        color: red;
-        background-color: antiquewhite;
+
+        background-color: #606eca;
     }
 
   }
@@ -276,3 +297,9 @@ body{
     margin: 10px 0;
   }
   
+
+
+
+  .h1-shopname{
+   margin-left: 50px;
+  }
