@@ -1,7 +1,17 @@
 import React from 'react'
 import logoImage from "./shop.png";
+import { useHistory } from 'react-router-dom';
 
 const Hproduct = () => {
+    const history = useHistory();
+
+    const handleViewShopClick = () => {
+      history.push('/shop');
+    };
+  
+    const handleSendMessageClick = () => {
+      history.push('/messaging');
+    };
     return (
         <div className="shop-container">
             <div className="store-header">
@@ -9,8 +19,12 @@ const Hproduct = () => {
                     <div className='shop-name'>
                         <h1>DT5Sport</h1>&nbsp;&nbsp;&nbsp;
                         <img src={logoImage} alt="DT5 SPORT" />&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button className='b'>Theo dõi</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <button className='b'>Nhắn tin</button>
+                        <button className='b' onClick={handleViewShopClick}>
+        Theo dõi
+      </button>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button className='b' onClick={handleSendMessageClick}>
+        Nhắn tin
+      </button>
 
                     </div>
                     <div className='shop-review'>

@@ -1,7 +1,17 @@
 import React from 'react'
 import logoImage from "./shop.png";
+import { useHistory } from 'react-router-dom';
 
 const Shopdetail = () => {
+    const history = useHistory();
+
+  const handleViewShopClick = () => {
+    history.push('/product');
+  };
+
+  const handleSendMessageClick = () => {
+    history.push('/messaging');
+  };
     return (
         <div className="shopdetail-container">
             <div className="store-header">
@@ -11,8 +21,8 @@ const Shopdetail = () => {
                         <div className='shop-flow'>
                         &nbsp;<h1 className='h1-shopname'>DT5Sport</h1>
 
-                        <button className='b'>Theo dõi</button>
-                        <button className='b'>Nhắn tin</button>
+                        <button className='b' onClick={handleViewShopClick}>Shop</button>
+                        <button className='b' onClick={handleSendMessageClick}>Nhắn tin</button>
                         </div>
                     </div>
                     <div className='shop-review'>
