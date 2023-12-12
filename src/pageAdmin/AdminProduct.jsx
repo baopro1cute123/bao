@@ -43,6 +43,7 @@ const AdminProduct = () => {
         <div>Phân loại</div>
         <div>Hình ảnh</div>
         <div>Giá tiền</div>
+        <div>Size</div>
         <div>Doanh nghiệp</div>
         <div>Action</div>
 
@@ -57,6 +58,8 @@ const AdminProduct = () => {
           </div>
           <div>{product.total}</div>
           <div>{product.business}</div>
+          <div>{product.business}</div>
+
           <div>
             <button className='edit' onClick={() => handleEitUser()}>Edit</button>
             <button className='delete' onClick={() => handleDeleteUser()}>Delete</button>

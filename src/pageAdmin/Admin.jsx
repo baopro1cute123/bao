@@ -5,8 +5,8 @@ import RevenueAdmin from './RevenueAdmin'
 import AdminProduct from './AdminProduct'
 import TrackAdmin from './TrackAdmin'
 import ShippingAdmin from './ShippingAdmin'
-import Dashboard from './Dashboard'
 import UserAdmin from './UserAdmin'
+import Dashboard from './Dashboard/Dashboard'
 
 const Admin = () => {
     return (
@@ -19,7 +19,7 @@ const Admin = () => {
                             <h2>KÊNH ADMIN</h2>
                         </div>
                     </div>
-                    <Dashboard />
+                    <Dashboard/>
                     <UserAdmin />
                     <ShippingAdmin />
                     <TrackAdmin />

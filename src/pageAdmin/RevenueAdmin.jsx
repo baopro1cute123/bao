@@ -65,15 +65,15 @@ const RevenueAdmin = () => {
 
             {/* Filter options */}
             <div className="filter-options">
-                <button onClick={() => handleFilter('day')}>Ngày</button>
-                <button onClick={() => handleFilter('month')}>Tháng</button>
-                <button onClick={() => handleFilter('quarter')}>Quý</button>
-                <button onClick={() => handleFilter('year')}>Năm</button>
-                <button onClick={() => handleFilter('all')}>Tất cả</button>
+                <button className='sort' onClick={() => handleFilter('day')}>Ngày</button>
+                <button className='sort' onClick={() => handleFilter('month')}>Tháng</button>
+                <button className='sort' onClick={() => handleFilter('quarter')}>Quý</button>
+                <button className='sort' onClick={() => handleFilter('year')}>Năm</button>
+                <button className='sort' onClick={() => handleFilter('all')}>Tất cả</button>
             </div>
 
             {/* Sorting button */}
-            <button onClick={handleSort}>Sắp xếp</button>
+            <button className='sort' onClick={handleSort}>Sắp xếp</button>
 
             <div className="track-container">
                 <h1>DOANH THU</h1>

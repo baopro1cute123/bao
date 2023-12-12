@@ -107,10 +107,13 @@
 
     .edit {
         background-color: blue;
+        width: 100px;
     }
 
     .delete {
         background-color: red;
+        width: 100px;
+
     }
 }
 

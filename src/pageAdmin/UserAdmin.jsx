@@ -56,6 +56,7 @@ const UserAdmin = () => {
                 <div>Email</div>
                 <div>Họ và tên</div>
                 <div>Mật khẩu</div>
+                <div>Địa chỉ</div>
                 <div>Action</div>
             </div>
 
@@ -68,6 +69,8 @@ const UserAdmin = () => {
                     </div>
                     <div>{product.name}</div>
                     <div>{product.password}</div>
+                    <div>{product.password}</div>
+
                     <div> <button className='edit' onClick={() => handleEitUser()}>Edit</button>
                         <button className='delete' onClick={() => handleDeleteUser()}>Delete</button></div>
 

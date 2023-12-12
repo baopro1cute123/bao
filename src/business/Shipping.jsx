@@ -17,7 +17,7 @@ const Shipping = () => {
             total: '50,000 VND',
             orderNumber: '789012',
             status: 'Chưa giao hàng',
-            location: 'Đang xác nhận đơn hàng',
+            location: 'Chưa vận chuyển',
             estimatedDelivery: '15 Tháng 12, 2023',
         },
     ]);
@@ -26,7 +26,7 @@ const Shipping = () => {
         <div className="track-container">
             <h1>QUẢN LÝ VẬN CHUYỂN</h1>
             <div className="tracking-header">
-                <div>Tên đơn hàng</div>
+                <div>Mã đơn hàng</div>
                 <div>Tên sản phẩm</div>
                 <div>Hình ảnh</div>
                 <div>Giá tiền</div>
