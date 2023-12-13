@@ -24,6 +24,7 @@ import Business from "./business/Business"
 import NewProductPage from "./business/NewProductPage"
 import Admin from "./pageAdmin/Admin"
 import Loading from "./loading/Loading"
+import NewCart from "./common/Cart/NewCart"
 function App() {
 
   const { productItems } = Data
@@ -126,6 +127,9 @@ function App() {
           </Route>
           <Route path='/profile' exact>
             <Profile />
+          </Route>
+          <Route path='/newcart' exact>
+            <NewCart />
           </Route>
           <Route path='/product' exact>
             <Product addToCart={addToCart} shopItems={shopItems} apiCate={apiCate} />

@@ -8,7 +8,6 @@ const Checkout = () => {
     <div className="checkout-container">
       <div className="checkout-form">
         <h2 className="h2-checkout">Trang Thanh Toán</h2>
-        <h2 className="h2-checkout">Thông tin thanh toán</h2>
 
         <form className="form-checkout">
           <div className="form-group">
@@ -50,7 +49,9 @@ const Checkout = () => {
           <button type="submit">Place Order</button>
         </form>
       </div>
+      <div className="momo-checkout">
       <MoMoCheckout/>
+      </div>
     </div>
   );
 };
