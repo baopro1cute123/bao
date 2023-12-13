@@ -71,7 +71,12 @@ import { Link } from 'react-router-dom';
 const Register = () => {
     //const { loginContext } = useContext(UserContext);
     const [email, setemail] = useState("");
+    const [name, setname] = useState("");
+
     const [password, setpassword] = useState("");
+
+    const [repassword, setrepassword] = useState("");
+
     const [isShowPassword, setIsShowPassword] = useState(false);
 
     const [loadingApi, setloadingApi] = useState(false)
@@ -113,7 +118,7 @@ const Register = () => {
             <div className='title'>ĐĂNG KÝ</div>
             <div className='text'>Nhập họ và tên </div>
             <input className='input' type='text' placeholder='Nhập họ và tên...'
-                value={email} onChange={(event) => setemail(event.target.value)} />
+                value={name} onChange={(event) => setname(event.target.value)} />
             <div className='text'>Email or Username  </div>
             <input className='input' type='text' placeholder='Email or username...'
                 value={email} onChange={(event) => setemail(event.target.value)} />
@@ -123,7 +128,7 @@ const Register = () => {
                     value={password} onChange={(event) => setpassword(event.target.value)} />
                 <div className='text'>Nhập lại Mật khẩu </div>
                 <input className='input' type={isShowPassword === true ? "text" : 'password'} placeholder='Password...'
-                    value={password} onChange={(event) => setpassword(event.target.value)} />
+                    value={repassword} onChange={(event) => setrepassword(event.target.value)} />
                 <i className={isShowPassword === true ? "fa-solid fa-eye" : "fa-solid fa-eye-slash"}
                     onClick={() => setIsShowPassword(!isShowPassword)}>
                 </i>
@@ -133,7 +138,7 @@ const Register = () => {
             </div>
             <p className='p'>forgot password?</p>
             <button className={email && password ? "button-1" : ""}
-                disabled={email && password ? false : true}
+                disabled={email && password && name && repassword  ? false : true}
                 onClick={() => handleLogin()}
             >
                 {loadingApi && <i class="fas fa-sync fa-spin"></i>}
