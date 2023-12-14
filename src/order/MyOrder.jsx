@@ -1,4 +1,5 @@
 // MyOrder.js
+import { red } from '@mui/material/colors';
 import React from 'react';
 
 const MyOrder = ({ orders }) => {
@@ -25,6 +26,8 @@ const MyOrder = ({ orders }) => {
                     <div className="total-state-container">
                         <p className="total-text">Tổng tiền: ${order.total}</p>
                         <p className="state-text">Trạng thái: {order.state}</p>
+                        <button className="total-text">Xác nhận: Đã giao hàng</button>
+
                     </div>
                 </div>
             ))}

@@ -18,7 +18,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
         visiblePages.forEach((page, index) => {
             if (index > 0 && page - visiblePages[index - 1] > 1) {
-                // Nếu có khoảng cách giữa các trang, thêm dấu ba chấm
+
                 paginationItems.push(
                     <span key={`dots${index}`} className="pagination-dots">
                         ...

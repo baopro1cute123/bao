@@ -45,7 +45,7 @@ const TrackAdmin = () => {
             </form>
 
             <div className="tracking-header">
-                <div>Đơn hàng</div>
+                <div>Mã Đơn hàng</div>
                 <div>Tên sản phẩm</div>
                 <div>Hình ảnh</div>
                 <div>Tổng giá trị</div>

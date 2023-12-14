@@ -9,11 +9,12 @@ const Order = ({ }) => {
             date: '2023-11-26',
             items: [
                 {
-                    id: 1, name: 'Giày thể thao đá bóng', quantity: 2, price: 10, img: 'logo.png', size: "XL",
+                    id: 1, name: 'Giày thể thao đá bóng', quantity: 2, price: 10, 
+                    img: 'https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/10/30/969136/Cristiano-Ronaldo4.jpg', size: "XL",
                     detail: "giày nam số một thị trường dành cho nhưng cầu thủ, sử dụng cho môi trường làm việc với công suất lớn "
                 },
                 {
-                    id: 2, name: 'Giày thể thao đá bóng', quantity: 1, price: 20, img: 'logo.png', size: "XL",
+                    id: 2, name: 'Giày thể thao đá bóng', quantity: 1, price: 20, img: 'https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/10/30/969136/Cristiano-Ronaldo4.jpg', size: "XL",
                     detail: "giày nam số một thị trường dành cho nhưng cầu thủ, sử dụng cho môi trường làm việc với công suất lớn "
                 },
                 // Add more items

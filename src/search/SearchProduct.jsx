@@ -1,36 +1,36 @@
 import React from "react"
-import Catg from "./Catg"
-import ProductCart from "./ProductCart";
-import Hproduct from "./Hproduct";
-import Tips from "./tips/Tips";
-import Sortproduct from "./Sortproduct";
-import Pagination from "./Pagination";
 import { useState } from "react";
-import "./Shopproduct.css";
-const Product = ({ addToCart, shopItems, apiCate }) => {
+import Sortproduct from "../product/Sortproduct";
+import ProductCart from "../product/ProductCart";
+import Pagination from "../product/Pagination";
+
+import "./Search.css"
+import MenuSearch from "./MenuSearch";
+import Tips from "../product/tips/Tips";
+import SearchShop from "./SearchShop";
+const SearchProduct = ({ addToCart, shopItems, apiCate }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = 10; // Số trang tổng cộng
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
+        // Thực hiện các xử lý khác khi trang thay đổi, ví dụ: gọi API để lấy dữ liệu mới
         console.log(`Đã chuyển đến trang ${pageNumber}`);
     };
     return (
         <>
             <section className='shop background'>
-                <div >
-                    <Hproduct />
-                </div>
-                <div>
-                    <Tips />
-                </div>
-
                 <div className='container d_flex'>
-                    <Catg shopItems={shopItems} apiCate={apiCate} />
+                    <MenuSearch shopItems={shopItems} apiCate={apiCate} />
 
                     <div className='contentWidth'>
+                    <div className='heading d_flex'>
+                            <SearchShop/>
+                        </div>
+                        <h2>Kết quả tìm kiếm cho từ khóa " "</h2>
+
                         <div className='heading d_flex'>
-                            <Sortproduct />
+                            <Sortproduct/>
                         </div>
                         <div className='heading d_flex'>
                             <div className='heading-left row  f_flex'>
@@ -54,4 +54,4 @@ const Product = ({ addToCart, shopItems, apiCate }) => {
     )
 }
 
-export default Product;
+export default SearchProduct;

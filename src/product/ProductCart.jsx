@@ -5,6 +5,7 @@ const ProductCart = ({ addToCart }) => {
   const [count, setCount] = useState(0);
 
   const shopItems = [
+    
     {
       id: 1,
       name: "Product 1",
@@ -37,6 +38,77 @@ const ProductCart = ({ addToCart }) => {
         ],
         price: 150000,
       },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      
       
   ];
 

@@ -25,6 +25,8 @@ import NewProductPage from "./business/NewProductPage"
 import Admin from "./pageAdmin/Admin"
 import Loading from "./loading/Loading"
 import NewCart from "./common/Cart/NewCart"
+import SearchProduct from "./search/SearchProduct"
+import SearchallShop from "./search/searchallShop/SearchallShop"
 function App() {
 
   const { productItems } = Data
@@ -143,8 +145,14 @@ function App() {
           <Route path='/business' exact>
             <Business />
           </Route>
+          <Route path='/search' exact>
+            <SearchProduct />
+          </Route>
           <Route path='/new-product' exact>
             <NewProductPage />
+          </Route>
+          <Route path='/allShop' exact>
+            <SearchallShop />
           </Route>
           </Switch>
         {/* {<AppRouter />} */}
