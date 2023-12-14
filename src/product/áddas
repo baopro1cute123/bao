@@ -1,0 +1,192 @@
+const shopItems = [
+    {
+      "page": 1,
+      "per_page": 6,
+      "total": 12,
+      "total_pages": 2,
+      "data": [
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        // ... (other data for page 1)
+      ],
+    },
+    {
+      "page": 2,
+      "per_page": 6,
+      "total": 12,
+      "total_pages": 2,
+      "data": [
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        {
+          "id": 1,
+          "discount": "30%",
+          "price": "100.000đ",
+          "imageSet": [
+            { url: "https://reqres.in/img/faces/2-image.jpg" },
+            { url: "https://example.com/image4.jpg" },
+          ],
+        },
+        
+        // ... (other data for page 2)
+      ],
+    },
+  ];

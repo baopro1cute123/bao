@@ -134,7 +134,7 @@ function App() {
             <NewCart />
           </Route>
           <Route path='/product' exact>
-            <Product addToCart={addToCart} shopItems={shopItems} apiCate={apiCate} />
+            <Product addToCart={addToCart}  apiCate={apiCate} />
           </Route>
           {/* <Route path='/admin' exact>
             <Pageadmin /> */}
