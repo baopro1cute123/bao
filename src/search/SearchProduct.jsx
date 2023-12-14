@@ -6,17 +6,131 @@ import Pagination from "../product/Pagination";
 
 import "./Search.css"
 import MenuSearch from "./MenuSearch";
-import Tips from "../product/tips/Tips";
 import SearchShop from "./SearchShop";
-const SearchProduct = ({ addToCart, shopItems, apiCate }) => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const totalPages = 10; // Số trang tổng cộng
 
-    const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
-        // Thực hiện các xử lý khác khi trang thay đổi, ví dụ: gọi API để lấy dữ liệu mới
-        console.log(`Đã chuyển đến trang ${pageNumber}`);
-    };
+
+const shopItems = [
+    
+    {
+      id: 1,
+      name: "Product 1",
+      discount: 10,
+      imageSet: [
+        { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+        { url: "https://example.com/image2.jpg" },
+        // Add more images if needed
+      ],
+      price: 100000,
+    },
+    {
+      id: 2,
+      name: "Product 2",
+      discount: 15,
+      imageSet: [
+        { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+        { url: "https://example.com/image4.jpg" },
+        // Add more images if needed
+      ],
+      price: 150000,
+    },
+    {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+      {
+        id: 3,
+        name: "Product 2",
+        discount: 15,
+        imageSet: [
+          { url: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/1/22/873088/Ronaldo1.jpg" },
+          { url: "https://example.com/image4.jpg" },
+        ],
+        price: 150000,
+      },
+    ]
+const SearchProduct = ({ addToCart, apiCate }) => {
+    const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5; // Số sản phẩm trên mỗi trang
+
+  const totalItems = shopItems.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
+
+  const getCurrentPageData = () => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentData = shopItems.slice(startIndex, endIndex);
+    return currentData;
+  };
     return (
         <>
             <section className='shop background'>
@@ -42,7 +156,7 @@ const SearchProduct = ({ addToCart, shopItems, apiCate }) => {
                             </div>
                         </div>
                         <div className='product-content  grid1'>
-                            <ProductCart addToCart={addToCart} shopItems={shopItems} />
+                            <ProductCart addToCart={addToCart} shopItems={getCurrentPageData()} />
                         </div>
                         <div >
                             <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
