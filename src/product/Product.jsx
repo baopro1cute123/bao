@@ -6,6 +6,8 @@ import Tips from "./tips/Tips";
 import Sortproduct from "./Sortproduct";
 import Pagination from "./Pagination";
 import "./Shopproduct.css";
+import { useHistory } from 'react-router-dom';
+
 
 const shopItems = [
     
@@ -116,6 +118,9 @@ const shopItems = [
   ];
 
 const Product = ({ addToCart, apiCate }) => {
+
+  const history = useHistory();
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5; // Số sản phẩm trên mỗi trang
 
@@ -133,6 +138,11 @@ const Product = ({ addToCart, apiCate }) => {
     return currentData;
   };
 
+  const handleClick = () => {
+    // Thực hiện các hành động bạn muốn ở đây
+    // Ví dụ: chuyển đến trang mới
+    history.push('/allproduct');
+  };
   return (
     <>
       <section className="shop background">
@@ -155,7 +165,8 @@ const Product = ({ addToCart, apiCate }) => {
                 <h2>SẢN PHẨM CỦA SHOP</h2>
               </div>
               <div className="heading-right row">
-                <span>Xem tất cả</span>
+              <span onClick={handleClick}>Xem tất cả</span>
+
                 <i className="fa-solid fa-caret-right"></i>
               </div>
             </div>

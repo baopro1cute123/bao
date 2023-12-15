@@ -1,0 +1,39 @@
+/* AccountInfo.css */
+.AccountInfo {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .AccountInfo h2 {
+    color: #333;
+  }
+  
+  .AccountInfo p {
+    margin: 8px 0;
+  }
+  
+
+  /* TransactionHistory.css */
+.TransactionHistory {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .TransactionHistory h2 {
+    color: #333;
+  }
+  
+  .TransactionHistory ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .TransactionHistory li {
+    margin: 8px 0;
+  }
+  

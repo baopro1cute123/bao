@@ -11,9 +11,7 @@ import Login from "./components/LoginSignup/Login"
 import Register from "./components/LoginSignup/Register"
 import Checkout from "./components/checkout/Checkout"
 import Product from "./product/Product"
-import { useEffect } from "react"
 import ProductDetail from "./productdetail/ProductDetail"
-import axiosInstance, { setHeaderToken } from "./apiConfig"
 import HeaderLogin from "./common/headerLogin/HeaderLogin"
 //import Register from "./components/LoginSignup/Register"
 // import Pageadmin from "./admin/Pageadmin"
@@ -27,6 +25,8 @@ import Loading from "./loading/Loading"
 import NewCart from "./common/Cart/NewCart"
 import SearchProduct from "./search/SearchProduct"
 import SearchallShop from "./search/searchallShop/SearchallShop"
+import Adress from "./adress/Adress"
+import BankPage from "./bank/BankPage"
 function App() {
 
   const { productItems } = Data
@@ -144,6 +144,12 @@ function App() {
           </Route>
           <Route path='/business' exact>
             <Business />
+          </Route>
+          <Route path='/adress' exact>
+            <Adress/>
+          </Route>
+          <Route path='/bank' exact>
+            <BankPage/>
           </Route>
           <Route path='/search' exact>
             <SearchProduct />
