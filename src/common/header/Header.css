@@ -236,7 +236,7 @@ header ul li a:hover {
   padding: 15px; /* Tăng kích thước của menu */
   border: 1px solid #ccc;
   background-color: #fff;
-  width: 850px; /* Đặt chiều rộng của menu */
+  width: 100%; /* Đặt chiều rộng của menu */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm shadow */
 }
 

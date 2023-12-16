@@ -122,7 +122,7 @@ const Product = ({ addToCart, apiCate }) => {
   const history = useHistory();
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5; // Số sản phẩm trên mỗi trang
+  const itemsPerPage = 10; // Số sản phẩm trên mỗi trang
 
   const totalItems = shopItems.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);

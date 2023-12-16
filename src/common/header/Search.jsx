@@ -9,6 +9,7 @@ const Search = ({ CartItem }) => {
     search.classList.toggle("active", window.scrollY > 100)
   })
   const [searchValue, setSearchValue] = useState('');
+  
   const [showMenu, setShowMenu] = useState(false);
 
   const handleInputChange = (event) => {
