@@ -25,7 +25,7 @@ import Loading from "./loading/Loading"
 import NewCart from "./common/Cart/NewCart"
 import SearchProduct from "./search/SearchProduct"
 import SearchallShop from "./search/searchallShop/SearchallShop"
-import Adress from "./adress/Adress"
+import Address from "./adress/Address"
 import BankPage from "./bank/BankPage"
 function App() {
 
@@ -88,7 +88,7 @@ function App() {
   return (
     <>
       <Router>
-        { <HeaderLogin />} 
+        {/* { <HeaderLogin />}  */}
 
         <Header CartItem={CartItem} />
         {/* {<Header CartItem={CartItem} isLoggedIn={isLoggedIn} username={username} onLogout={handleLogout} />} */}
@@ -146,7 +146,7 @@ function App() {
             <Business />
           </Route>
           <Route path='/adress' exact>
-            <Adress/>
+            <Address/>
           </Route>
           <Route path='/bank' exact>
             <BankPage/>
@@ -162,8 +162,11 @@ function App() {
           </Route>
           </Switch>
         {/* {<AppRouter />} */}
+
         {<Footer />}
+
         </Router>
+
     </>
   )
 }

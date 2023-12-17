@@ -1,7 +1,7 @@
 footer {
-  background-color: #0f3460;
+  background-color: white;
   padding: 100px 0;
-  color: #fff;
+  color: black;
 }
 footer h1 {
   margin-bottom: 30px;
@@ -10,7 +10,6 @@ footer h1 {
   font-style: italic;
 }
 footer .img {
-  background-color: #0c2a4d;
   padding: 15px 20px;
   border-radius: 5px;
 }

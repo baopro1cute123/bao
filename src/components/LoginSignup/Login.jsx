@@ -62,8 +62,8 @@ const Login = (onLoginSuccess) => {
     }
 
     return (
-        <div className='login-container col-12 col-sm-4'>
-
+        <div className='loginn'>
+        <div className='login-container '>
             <div className='title'>ĐĂNG NHẬP</div>
             <div className='text'>Email hoặc Tên đăng nhập </div>
             <input className='input' type='text' placeholder='Email/Tên đăng nhập...'
@@ -94,6 +94,7 @@ const Login = (onLoginSuccess) => {
                     Đăng ký ngay </Link></span>
 
             </div>
+        </div>
         </div>
     )
 }

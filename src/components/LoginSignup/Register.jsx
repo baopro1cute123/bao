@@ -113,7 +113,8 @@ const Register = () => {
     }
 
     return (
-        <div className='login-container col-12 col-sm-4'>
+        <div className='loginn'>
+        <div className='login-container '>
 
             <div className='title'>ĐĂNG KÝ</div>
             <div className='text'>Nhập họ và tên </div>
@@ -153,6 +154,7 @@ const Register = () => {
                     Đăng nhập ngay </Link></span>
 
             </div>
+        </div>
         </div>
     )
 }
