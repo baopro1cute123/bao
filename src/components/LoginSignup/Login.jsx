@@ -64,27 +64,27 @@ const Login = (onLoginSuccess) => {
     return (
         <div className='login-container col-12 col-sm-4'>
 
-            <div className='title'>Log in</div>
-            <div className='text'>Email or Username  </div>
-            <input className='input' type='text' placeholder='Email or username...'
+            <div className='title'>ĐĂNG NHẬP</div>
+            <div className='text'>Email hoặc Tên đăng nhập </div>
+            <input className='input' type='text' placeholder='Email/Tên đăng nhập...'
                 value={username} onChange={(event) => setUsername(event.target.value)} />
             <div className='input-2'>
                 <div className='text'>Mật khẩu </div>
 
-                <input className='input' type={isShowPassword === true ? "text" : 'password'} placeholder='Password...'
+                <input className='input' type={isShowPassword === true ? "text" : 'password'} placeholder='Mật khẩu...'
                     value={password} onChange={(event) => setpassword(event.target.value)} />
                 <i className={isShowPassword === true ? "fa-solid fa-eye" : "fa-solid fa-eye-slash"} onClick={() => setIsShowPassword(!isShowPassword)}>
 
                 </i>
             </div>
-            <p className='p'>forgot password?</p>
+            <p className='p'>Quên mật khẩu ?</p>
             <button className={username && password ? "button-1" : ""}
                 disabled={username && password ? false : true}
                 onClick={() => handleLogin()}
             >
                 {loadingApi && <i class="fas fa-sync fa-spin"></i>}
 
-                &nbsp;Login</button>
+                &nbsp;Đăng nhập</button>
 
             <div className='back'>
                 <i className="fa-solid fa-angles-left"></i>

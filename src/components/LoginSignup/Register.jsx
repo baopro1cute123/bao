@@ -119,15 +119,15 @@ const Register = () => {
             <div className='text'>Nhập họ và tên </div>
             <input className='input' type='text' placeholder='Nhập họ và tên...'
                 value={name} onChange={(event) => setname(event.target.value)} />
-            <div className='text'>Email or Username  </div>
-            <input className='input' type='text' placeholder='Email or username...'
+            <div className='text'>Email hoặc tên đăng nhập  </div>
+            <input className='input' type='text' placeholder='Email hoặc tên đăng nhập...'
                 value={email} onChange={(event) => setemail(event.target.value)} />
             <div className='input-2'>
                 <div className='text'>Mật khẩu </div>
-                <input className='input' type={isShowPassword === true ? "text" : 'password'} placeholder='Password...'
+                <input className='input' type={isShowPassword === true ? "text" : 'password'} placeholder='Mật khẩu...'
                     value={password} onChange={(event) => setpassword(event.target.value)} />
                 <div className='text'>Nhập lại Mật khẩu </div>
-                <input className='input' type={isShowPassword === true ? "text" : 'password'} placeholder='Password...'
+                <input className='input' type={isShowPassword === true ? "text" : 'password'} placeholder='Nhập lại mật khẩu...'
                     value={repassword} onChange={(event) => setrepassword(event.target.value)} />
                 <i className={isShowPassword === true ? "fa-solid fa-eye" : "fa-solid fa-eye-slash"}
                     onClick={() => setIsShowPassword(!isShowPassword)}>
@@ -136,7 +136,7 @@ const Register = () => {
 
                 <input className="input" type="file" id="profileImage" />
             </div>
-            <p className='p'>forgot password?</p>
+            <p className='p'>Bạn đã có tài khoản ?</p>
             <button className={email && password ? "button-1" : ""}
                 disabled={email && password && name && repassword  ? false : true}
                 onClick={() => handleLogin()}
