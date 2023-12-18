@@ -1,12 +1,12 @@
 import React from 'react'
 import "./Admin.css"
 import MenuAdmin from './MenuAdmin'
-import RevenueAdmin from './RevenueAdmin'
-import AdminProduct from './AdminProduct'
-import TrackAdmin from './TrackAdmin'
-import ShippingAdmin from './ShippingAdmin'
-import UserAdmin from './UserAdmin'
+import RevenueAdmin from './Revenue/RevenueAdmin'
+import AdminProduct from './Product/ProductAdmin'
+import TrackAdmin from './Track/TrackAdmin'
+import ShippingAdmin from './Shipping/ShippingAdmin'
 import Dashboard from './Dashboard/Dashboard'
+import UserAdmin from './UserAdmin/UserAdmin'
 
 const Admin = () => {
     return (
@@ -20,7 +20,7 @@ const Admin = () => {
                         </div>
                     </div>
                     <Dashboard/>
-                    <UserAdmin />
+                    <UserAdmin/>
                     <ShippingAdmin />
                     <TrackAdmin />
                     <AdminProduct />

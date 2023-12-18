@@ -1,7 +1,7 @@
 /* ListAddress.css */
 
 .adressprofile {
-   height: 150px;
+   height: 7rem;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
    background-color: white;
 }
@@ -50,7 +50,7 @@
     margin-left: 10px; /* Thêm một khoảng cách giữa các nút */
     padding: 5px 10px;
     cursor: pointer;
-    background-color: #3498db;
+    background-color: red;
     color: #fff;
     border: none;
     border-radius: 4px;

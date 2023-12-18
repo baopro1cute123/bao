@@ -2,11 +2,9 @@
 
 import React, { useState } from 'react';
 
-const TrackAdmin = () => {
+const Track = () => {
     const [trackingInfo, setTrackingInfo] = useState([]);
-    const handleTrack = () => {
 
-    }
     const handleTrackSubmit = (event) => {
         event.preventDefault();
         // In a real application, you would fetch tracking information from a server
@@ -45,14 +43,12 @@ const TrackAdmin = () => {
             </form>
 
             <div className="tracking-header">
-                <div>Mã Đơn hàng</div>
+                <div>Đơn hàng</div>
                 <div>Tên sản phẩm</div>
                 <div>Hình ảnh</div>
                 <div>Tổng giá trị</div>
                 <div>Trạng thái</div>
-                <div>Giao hàng dự kiến</div>
-                <div>Action</div>
-
+                <div>Ngày giao hàng</div>
             </div>
 
             {trackingInfo.map((order, index) => (
@@ -63,11 +59,10 @@ const TrackAdmin = () => {
                     <div>{order.total}</div>
                     <div>{order.status}</div>
                     <div>{order.estimatedDelivery}</div>
-                    <div><button onClick={() => handleTrack()}>XÁC NHẬN</button></div>
                 </div>
             ))}
         </div>
     );
 };
 
-export default TrackAdmin;
+export default Track;

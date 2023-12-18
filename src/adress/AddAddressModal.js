@@ -9,10 +9,11 @@ const AddAddressModal = ({ isOpen, onRequestClose, onAddAddress }) => {
   });
 
   const handleChange = (e) => {
-    setNewAddress({
-      ...newAddress,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setNewAddress((prevAddress) => ({
+      ...prevAddress,
+      [name]: value,
+    }));
   };
 
   const handleAdd = () => {
@@ -29,27 +30,34 @@ const AddAddressModal = ({ isOpen, onRequestClose, onAddAddress }) => {
       <h2>THÊM ĐỊA CHỈ MỚI</h2>
       <label>
         Họ và tên người nhận:&nbsp;
-        <input className='modalinput'
-          type="text"
-          value={newAddress.name}
-          onChange={handleChange}
-        />
+        <input
+  className='modalinput'
+  type="text"
+  name="name"
+  value={newAddress.name}
+  onChange={handleChange}
+/>
+
       </label>&nbsp;&nbsp;
       <label>
         Số điện thoại:&nbsp;
-        <input className='modalinput'
-          type="text"
-          value={newAddress.phone}
-          onChange={handleChange}
-        />
+        <input
+  className='modalinput'
+  type="text"
+  name="phone"
+  value={newAddress.phone}
+  onChange={handleChange}
+/>
       </label>&nbsp;&nbsp;
       <label>
         Địa chỉ:&nbsp;
-        <input className='modalinput'
-          type="text"
-          value={newAddress.address}
-          onChange={handleChange}
-        />
+        <input
+  className='modalinput'
+  type="text"
+  name="address"
+  value={newAddress.address}
+  onChange={handleChange}
+/>
       </label>&nbsp;&nbsp;
       <button className='add-address-button' onClick={handleAdd}>Lưu</button>
     </Modal>

@@ -83,8 +83,8 @@ const RevenueAdmin = () => {
                     <div>Hình ảnh</div>
                     <div>Giá tiền</div>
                     <div>Trạng thái</div>
-                    <div>Địa chỉ nhận hàng</div>
-                    <div>Dự kiến giao hàng</div>
+                    <div>Địa chỉ</div>
+                    <div>Ngày giao hàng</div>
 
                 </div>
 

@@ -4,18 +4,20 @@ import Modal from 'react-modal';
 
 const AddAccountModal = ({ isOpen, onRequestClose, onAddAccount }) => {
   const [newAccount, setNewAccount] = useState({
-    // Khai báo các trường cần thiết cho tài khoản ngân hàng mới
-    // Ví dụ:
     accountNumber: '',
-    balance: 0,
+    balance: "",
     ownerName: '',
   });
 
   const handleChange = (e) => {
-    setNewAccount({
-      ...newAccount,
-      [e.target.name]: e.target.value,
-    });
+    try {
+      setNewAccount({
+        ...newAccount,
+        [e.target.name]: e.target.value,
+      });
+    } catch (error) {
+      console.error('Error updating state:', error);
+    }
   };
 
   const handleAdd = () => {
@@ -34,7 +36,9 @@ const AddAccountModal = ({ isOpen, onRequestClose, onAddAccount }) => {
         Số tài khoản:&nbsp;
         <input
           type="text"
-          className='modalinput'          value={newAccount.accountNumber}
+          className='modalinput'   
+          name="accountNumber"       
+          value={newAccount.accountNumber}
           onChange={handleChange}
         />
       </label>&nbsp;
@@ -42,7 +46,9 @@ const AddAccountModal = ({ isOpen, onRequestClose, onAddAccount }) => {
         Số dư:&nbsp;
         <input
           type="number"
-          className='modalinput'          value={newAccount.balance}
+          className='modalinput' 
+          name='balance'         
+          value={newAccount.balance}
           onChange={handleChange}
         />
       </label>&nbsp;
@@ -50,7 +56,8 @@ const AddAccountModal = ({ isOpen, onRequestClose, onAddAccount }) => {
         Tên chủ tài khoản:&nbsp;
         <input
           type="text"
-          className='modalinput'          
+          className='modalinput'       
+          name='ownerName'   
           value={newAccount.ownerName}
           onChange={handleChange}
         />

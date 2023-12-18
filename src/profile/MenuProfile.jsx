@@ -9,14 +9,10 @@ const MenuProfile = () => {
             <div className='category'>
                 <div className="menu-profile">
                     <h3>Nguyễn Bảo</h3>
-                    <label className='lableprofile'><Link to="/profile">👤Tài khoản</Link></label>
                     <label className='lableprofile'><Link to="/profile">👤Hồ sơ</Link></label>
                     <label className='lableprofile'><Link to="/adress">📍Địa chỉ</Link></label>
                     <label className='lableprofile'><Link to="/bank"> 💳Ngân Hàng</Link></label>
                     <label className='lableprofile'><Link to="/order">🔔Đơn hàng</Link></label>
-                    <label className='lableprofile'><Link to="/account">🔔Cài đặt</Link></label>
-
-
                 </div>
             </div>
         </>

@@ -18,7 +18,6 @@ import HeaderLogin from "./common/headerLogin/HeaderLogin"
 import Profile from "./profile/Profile"
 import Order from "./order/Order"
 import AllProduct from "./allProduct/AllProduct"
-import Business from "./business/Business"
 import NewProductPage from "./business/NewProductPage"
 import Admin from "./pageAdmin/Admin"
 import Loading from "./loading/Loading"
@@ -27,6 +26,17 @@ import SearchProduct from "./search/SearchProduct"
 import SearchallShop from "./search/searchallShop/SearchallShop"
 import Address from "./adress/Address"
 import BankPage from "./bank/BankPage"
+import AdminDashboard from "./pageAdmin/Dashboard/AdminDashboard"
+import AdminUser from "./pageAdmin/UserAdmin/AdminUser"
+import AdminShip from "./pageAdmin/Shipping/AdminShip"
+import AdminTrack from "./pageAdmin/Track/AdminTrack"
+import AdminRevenue from "./pageAdmin/Revenue/AdminRevenue"
+import AdminProduct from "./pageAdmin/Product/AdminProduct"
+import BusinessProduct from "./business/product/BusinessProduct"
+import BusinessRevenue from "./business/revenue/BusinessRevenue"
+import BusinessShip from "./business/ship/BusinessShip"
+import BusinessTrack from "./business/track/BusinessTrack"
+import Business from "./business/Business"
 function App() {
 
   const { productItems } = Data
@@ -133,6 +143,9 @@ function App() {
           <Route path='/newcart' exact>
             <NewCart />
           </Route>
+          <Route path='/business' exact>
+            <Business />
+          </Route>
           <Route path='/product' exact>
             <Product addToCart={addToCart}  apiCate={apiCate} />
           </Route>
@@ -141,9 +154,6 @@ function App() {
           {/* </Route> */}
           <Route path='/pageadmin' exact>
             <Admin />
-          </Route>
-          <Route path='/business' exact>
-            <Business />
           </Route>
           <Route path='/adress' exact>
             <Address/>
@@ -160,6 +170,38 @@ function App() {
           <Route path='/allShop' exact>
             <SearchallShop />
           </Route>
+          <Route path='/dashboard' exact>
+            <AdminDashboard />
+          </Route>
+          <Route path='/adminuser' exact>
+            <AdminUser />
+          </Route>
+          <Route path='/adminship' exact>
+            <AdminShip />
+          </Route>
+          <Route path='/admintrack' exact>
+            <AdminTrack />
+          </Route>
+          <Route path='/adminrevenue' exact>
+            <AdminRevenue />
+          </Route>
+          <Route path='/adminproduct' exact>
+            <AdminProduct />
+          </Route>
+
+          <Route path='/businessproduct' exact>
+            <BusinessProduct />
+          </Route>
+          <Route path='/businessrevenue' exact>
+            <BusinessRevenue />
+          </Route>
+          <Route path='/businessship' exact>
+            <BusinessShip />
+          </Route>
+          <Route path='/businesstrack' exact>
+            <BusinessTrack />
+          </Route>
+          
           </Switch>
         {/* {<AppRouter />} */}
 

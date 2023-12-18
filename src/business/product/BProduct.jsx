@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-const AdminProduct = () => {
+const BProduct = () => {
   const history = useHistory();
   const [trackingInfo, setTrackingInfo] = useState([
     {
@@ -10,7 +10,6 @@ const AdminProduct = () => {
       orderNumber: '123456',
       status: 'Đã giao hàng',
       location: 'Đang vận chuyển',
-      business: "AB",
       estimatedDelivery: '10 Tháng 12, 2023',
     },
     {
@@ -20,7 +19,6 @@ const AdminProduct = () => {
       orderNumber: '789012',
       status: 'Chưa giao hàng',
       location: 'Đang xác nhận đơn hàng',
-      business: "AB",
       estimatedDelivery: '15 Tháng 12, 2023',
     },
   ]);
@@ -28,12 +26,13 @@ const AdminProduct = () => {
 
     history.push('/new-product');
   };
-  const handleEitUser = () => {
+  const handleEitProduct = () => {
 
   }
-  const handleDeleteUser = () => {
+  const handleDeleteProduct = () => {
 
   }
+
   return (
     <div className="track-container">
       <h2>Quản lý sản phẩm</h2>
@@ -43,9 +42,10 @@ const AdminProduct = () => {
         <div>Phân loại</div>
         <div>Hình ảnh</div>
         <div>Giá tiền</div>
-        <div>Size</div>
-        <div>Doanh nghiệp</div>
+        <div>Mô tả sản phẩm</div>
+        <div>Ngày giao hàng</div>
         <div>Action</div>
+
 
       </div>
 
@@ -57,18 +57,15 @@ const AdminProduct = () => {
             <img src={product.img} alt={`Product ${index + 1}`} />
           </div>
           <div>{product.total}</div>
-          <div>{product.business}</div>
-          <div>{product.business}</div>
-
-          <div>
-            <button className='edit' onClick={() => handleEitUser()}>Edit</button>
-            <button className='delete' onClick={() => handleDeleteUser()}>Delete</button>
+          <div>{product.status}</div>
+          <div>{product.estimatedDelivery}</div>
+          <div> <button className='edit' onClick={() => handleEitProduct()}>Edit</button>
+            <button className="delete" onClick={() => handleDeleteProduct()}>Delete</button>
           </div>
         </div>
-      ))
-      }
-    </div >
+      ))}
+    </div>
   );
 };
 
-export default AdminProduct;
+export default BProduct;
