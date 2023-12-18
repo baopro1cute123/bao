@@ -27,6 +27,7 @@
 /*------search-----------*/
 .search {
   padding: 20px 0;
+  padding-bottom: 50px;
 }
 
 .search .logo img {
@@ -214,9 +215,6 @@ header ul li a:hover {
 }
 
 
-
-
-
 .search-box {
   position: relative;
   display: flex;
@@ -232,8 +230,7 @@ header ul li a:hover {
   position: absolute;
   top: 100%; /* Hiển thị menu phía dưới ô tìm kiếm */
   left: 0;
-  margin-top: 10px;
-  padding: 15px; /* Tăng kích thước của menu */
+  padding: 5px; /* Tăng kích thước của menu */
   border: 1px solid #ccc;
   background-color: #fff;
   width: 100%; /* Đặt chiều rộng của menu */
@@ -244,6 +241,7 @@ header ul li a:hover {
   margin: 0;
   padding: 8px; /* Tăng kích thước của mỗi dòng trong menu */
   cursor: pointer;
+
 }
 
 /* Hiển thị menu khi ô tìm kiếm có giá trị */
