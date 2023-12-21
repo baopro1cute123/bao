@@ -9,7 +9,6 @@ import Footer from "./common/footer/Footer"
 import Contactt from "./components/contact/Contactt"
 import Login from "./components/LoginSignup/Login"
 import Register from "./components/LoginSignup/Register"
-import Checkout from "./components/checkout/Checkout"
 import Product from "./product/Product"
 import ProductDetail from "./productdetail/ProductDetail"
 import HeaderLogin from "./common/headerLogin/HeaderLogin"
@@ -37,6 +36,7 @@ import BusinessRevenue from "./business/revenue/BusinessRevenue"
 import BusinessShip from "./business/ship/BusinessShip"
 import BusinessTrack from "./business/track/BusinessTrack"
 import Business from "./business/Business"
+import Checkout from "./checkout/Checkout"
 function App() {
 
   const { productItems } = Data
