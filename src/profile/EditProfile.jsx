@@ -99,9 +99,8 @@
 // export default EditProfile;
 
 
-import { useState } from 'react';
-// import getUnAuth from '~/API/get';
-import imgProfile from './shop1.png';
+import { useEffect, useState } from 'react';
+import getUnAuth from '~/API/get';
 
 const EditProfile = () => {
     const s = JSON.parse(localStorage.getItem('User'));
@@ -116,28 +115,28 @@ const EditProfile = () => {
         dob: '',
     });
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             setLoading(true);
-    //             let response = await getUnAuth(`user/get-by-username/${s.un}`);
-    //             if (!response) {
-    //                 throw new Error('Network response was not ok');
-    //             }
-    //             console.log(response);
-    //             const date = new Date(response.dob);
-    //             const d = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
-    //             response.dob = d;
-    //             setUser(response);
-    //             setEditedUser(response); // Initialize editedUser with user data
-    //         } catch (error) {
-    //             setError(error);
-    //         } finally {
-    //             setLoading(false);
-    //         }
-    //     };
-    //     fetchData();
-    // }, []);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true);
+                let response = await getUnAuth(`user/get-by-username/${s.un}`);
+                if (!response) {
+                    throw new Error('Network response was not ok');
+                }
+                console.log(response);
+                const date = new Date(response.dob);
+                const d = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+                response.dob = d;
+                setUser(response);
+                setEditedUser(response); // Initialize editedUser with user data
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
 
     const handleInputChange = (e) => {
         setEditedUser({ ...editedUser, [e.target.name]: e.target.value });
@@ -227,9 +226,14 @@ const EditProfile = () => {
                 </button>
             </div>
             <div className="img-edit">
-                <img src={imgProfile} alt="" />
+                {/* <img src={imgProfile} alt="" />
+                <div className="text">Ảnh của bạn </div>
+                <input className="input-img" type="file" id="profileImage" /> */}
+                <img src={user.image_url} alt="" />
+
             </div>
         </div>
     );
 };
+
 export default EditProfile;
