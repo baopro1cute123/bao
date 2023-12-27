@@ -39,7 +39,7 @@ const Order = () => {
                 // Add more items
             ],
             total: 50,
-            state: "Giao thành công"
+            state: "Đã giao hàng thành công"
         },
         {
             id: 'Bussiness3',
@@ -73,24 +73,7 @@ const Order = () => {
                 // Add more items
             ],
             total: 50,
-            state: "Đã hủy đơn"
-        },
-        {
-            id: 'Bussiness4',
-            date: '2023-11-26',
-            items: [
-                {
-                    id: 1, name: 'Giày thể thao đá bóng', quantity: 2, price: 10, img: 'logo.png', size: "XL",
-                    detail: "giày nam số một thị trường dành cho nhưng cầu thủ, sử dụng cho môi trường làm việc với công suất lớn "
-                },
-                {
-                    id: 2, name: 'Giày thể thao đá bóng', quantity: 1, price: 20, img: 'logo.png', size: "XL",
-                    detail: "giày nam số một thị trường dành cho nhưng cầu thủ, sử dụng cho môi trường làm việc với công suất lớn "
-                },
-                // Add more items
-            ],
-            total: 50,
-            state: "Đã thanh toán"
+            state: "Hủy đơn hàng bên Bussiness"
         },
     ]);
 

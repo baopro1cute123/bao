@@ -118,3 +118,25 @@
   
 
 }
+
+.checkbox-container {
+ 
+}
+
+.checkbox-container input {
+  margin-right: 8px;
+  /* Increase the size of the checkbox */
+  width: 20px;
+  height: 20px;
+  /* Add some color to the checkbox */
+  background-color: #3498db; 
+  border: 1px solid #3498db;
+  border-radius: 4px; /* Optional: Add rounded corners */
+  cursor: pointer;
+}
+
+/* Style for checked state */
+.checkbox-container input:checked {
+  background-color: #2980b9;
+  border: 1px solid #2980b9; 
+}
