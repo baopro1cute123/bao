@@ -117,6 +117,19 @@
 
     }
 }
+.actiontrack{
+    
+    .action-button{
+        background-color: blue;
+        width: 100px;
+
+    }
+    .delete {
+        background-color: red;
+        width: 100px;
+
+    }
+}
 
 .tracking-header {
     font-weight: bold;
@@ -181,3 +194,16 @@ textarea {
 .edit {
     background-color: blue;
 }
+
+
+
+
+.checkbox-track {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+  }
+  
+
+/* CustomModal.css */
+

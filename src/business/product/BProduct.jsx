@@ -27,7 +27,7 @@ const BProduct = () => {
     history.push('/new-product');
   };
   const handleEitProduct = () => {
-
+    history.push('/editp');
   }
   const handleDeleteProduct = () => {
 

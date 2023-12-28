@@ -1,10 +1,13 @@
-import React, { useState } from "react"
-import Slider from "react-slick"
-import "slick-carousel/slick/slick-theme.css"
-import "slick-carousel/slick/slick.css"
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import getUnAuth from '~/API/get';
+import Loading from '~/components/loading/Loading';
 
 const SampleNextArrow = (props) => {
-  const { onClick } = props
+  const { onClick } = props;
   return (
     <div className='control-btn' onClick={onClick}>
       <button className='next'>
@@ -23,20 +26,45 @@ const SamplePrevArrow = (props) => {
     </div>
   )
 }
-const FlashCard = ({ productItems, addToCart }) => {
-  const [count, setCount] = useState(0)
-  const increment = () => {
-    setCount(count + 1)
-  }
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  }
+const FlashCard = () => {
+    const [productItems, setProductItems] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const flash_product = sessionStorage.getItem('flash_product');
+    const product = flash_product ? JSON.parse(flash_product) : null;
+    const navigate = useNavigate();
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true);
+                const response = await getUnAuth(`product-information?page=0&page_size=30&state=0`);
+                if (!response) {
+                    throw new Error('Network response was not ok');
+                }
+                //       console.log(response.content);
+                setProductItems(response.content);
+                sessionStorage.setItem('flash_product', JSON.stringify(response.content));
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        if (!product) fetchData();
+        else setProductItems(product);
+    }, []);
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+    };
+    const handleClick = (id) => {
+        if (id) navigate(`/product/${id}`);
+    };
 
   return (
     <>

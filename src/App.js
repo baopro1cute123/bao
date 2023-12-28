@@ -17,10 +17,13 @@ import Address from "./adress/Address"
 import AllProduct from "./allProduct/AllProduct"
 import BankPage from "./bank/BankPage"
 import Business from "./business/Business"
-import NewProductPage from "./business/NewProductPage"
 import BusinessProduct from "./business/product/BusinessProduct"
+import EditProductBusiness from "./business/product/EditProductBusiness"
+import NewProductPage from "./business/product/NewProductPage"
 import BusinessRevenue from "./business/revenue/BusinessRevenue"
-import BusinessShip from "./business/ship/BusinessShip"
+import BusinessSale from "./business/sale/BusinessSale"
+import SaleAdd from "./business/sale/SaleAdd"
+import SaleEdit from "./business/sale/SaleEdit"
 import BusinessTrack from "./business/track/BusinessTrack"
 import Checkout from "./checkout/Checkout"
 import NewCart from "./common/Cart/NewCart"
@@ -194,11 +197,21 @@ function App() {
           <Route path='/businessrevenue' exact>
             <BusinessRevenue />
           </Route>
-          <Route path='/businessship' exact>
-            <BusinessShip />
+          <Route path='/businesssale' exact>
+            <BusinessSale />
           </Route>
           <Route path='/businesstrack' exact>
             <BusinessTrack />
+          </Route>
+          <Route path='/addsale' exact>
+            <SaleAdd />
+          </Route>
+
+          <Route path='/editsale' exact>
+            <SaleEdit />
+          </Route>
+          <Route path='/editproduct' exact>
+            <EditProductBusiness />
           </Route>
           
           </Switch>

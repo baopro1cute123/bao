@@ -1,9 +1,9 @@
 import React from 'react'
 import MenuBusiness from '../MenuBusiness'
-import Shipping from './Shipping'
-import "../Business.css"
+import Sale from './Sale'
 
-const BusinessShip = () => {
+
+const BusinessSale = () => {
     return (
         <>
             <section className='shop background'>
@@ -14,10 +14,10 @@ const BusinessShip = () => {
                         </div>
                         <div className='heading d_flex'>
                             <div className='heading-left row  f_flex'>
-                                <h2>KÊNH NGƯỜI BÁN</h2>
+                                <h2>QUẢN LÝ SỰ KIỆN</h2>
                             </div>
                         </div>
-                        <Shipping />
+                        <Sale />
                     </div>
                 </div>
             </section>
@@ -25,4 +25,4 @@ const BusinessShip = () => {
     )
 }
 
-export default BusinessShip
+export default BusinessSale
