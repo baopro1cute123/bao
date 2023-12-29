@@ -1,21 +1,21 @@
 import React from 'react'
 import "../Admin.css"
 import MenuAdmin from '../MenuAdmin'
-import RevenueAdmin from './RevenueAdmin'
+import ShippingAdmin from './SaleAdmin'
 
 
-const AdminRevenue = () => {
+const AdminShip = () => {
     return (
-        <section className='shop '>
+        <section className='shop'>
             <div className='d_flex'>
                 <MenuAdmin />
                 <div className='contentWidth'>
-                 
-                    <RevenueAdmin/>
+                    
+                    <ShippingAdmin/>
                 </div>
             </div>
         </section>
     )
 }
 
-export default AdminRevenue
+export default AdminShip

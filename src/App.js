@@ -33,7 +33,8 @@ import Admin from "./pageAdmin/Admin"
 import AdminDashboard from "./pageAdmin/Dashboard/AdminDashboard"
 import AdminProduct from "./pageAdmin/Product/AdminProduct"
 import AdminRevenue from "./pageAdmin/Revenue/AdminRevenue"
-import AdminShip from "./pageAdmin/Shipping/AdminShip"
+import AdminShip from "./pageAdmin/Sale/AdminSale"
+import ViewSaleAdmin from "./pageAdmin/Sale/ViewSaleAdmin "
 import AdminTrack from "./pageAdmin/Track/AdminTrack"
 import AdminUser from "./pageAdmin/UserAdmin/AdminUser"
 import Profile from "./profile/Profile"
@@ -178,7 +179,7 @@ function App() {
           <Route path='/adminuser' exact>
             <AdminUser />
           </Route>
-          <Route path='/adminship' exact>
+          <Route path='/adminsale' exact>
             <AdminShip />
           </Route>
           <Route path='/admintrack' exact>
@@ -212,6 +213,9 @@ function App() {
           </Route>
           <Route path='/editproduct' exact>
             <EditProductBusiness />
+          </Route>
+          <Route path="/viewsaleadmin/:eventCode" exact>
+            <ViewSaleAdmin/>
           </Route>
           
           </Switch>
